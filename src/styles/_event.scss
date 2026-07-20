@@ -15,12 +15,6 @@
         background-image: linear-gradient(variables.$color3, variables.$color4);
     }
 
-    &--image-left {
-        .container {
-            flex-direction: row-reverse;
-        }
-    }
-
     .container {
         display: flex;
         gap: 40px;
@@ -28,21 +22,25 @@
 
     &__image {
         max-width: 50%;
+
     }
 
     &__details {
         &__title {
-            font-size: 18px;
+            font-size: 2rem;
             font-weight: bold;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
 
         &__description {
+            font-size: 1rem;
             line-height: 22px;
         }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 860px) {
+        padding: 0 auto;
+
         .container {
             display: block;
         }
@@ -53,7 +51,11 @@
 
         &__details {
             margin-right: 0;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        &__description {
+            text-align: center;
         }
     }
 }
